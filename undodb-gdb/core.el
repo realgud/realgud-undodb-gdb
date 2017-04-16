@@ -1,5 +1,5 @@
 
-;; Copyright (C) 2015-2016 Free Software Foundation, Inc
+;; Copyright (C) 2015-2017 Free Software Foundation, Inc
 
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 ;; Author: Felipe Lema <felipelema@mortemale.org>
@@ -19,11 +19,9 @@
 
 ;;; Code:
 
-(require 'load-relative)
-(require-relative-list '("../../common/track"
-			 "../../common/core"
-			 "../../common/lang")
-		       "realgud-")
+(eval-when-compile (require 'cl-lib))
+
+(require 'realgud)
 
 (declare-function realgud:expand-file-name-if-exists 'realgud-core)
 (declare-function realgud-lang-mode? 'realgud-lang)

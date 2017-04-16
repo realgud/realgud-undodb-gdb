@@ -21,14 +21,10 @@
 
 ;;; Code:
 
+(eval-when-compile (require 'cl))
+
+(require 'realgud)
 (require 'load-relative)
-(require-relative-list '(
-			 "../../common/cmds"
-			 "../../common/menu"
-			 "../../common/track"
-			 "../../common/track-mode"
-			 )
-		       "realgud-")
 (require-relative-list '("core" "init") "realgud:undodb-gdb-")
 
 (realgud-track-mode-vars "realgud:undodb-gdb")
