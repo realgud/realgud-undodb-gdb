@@ -1,7 +1,7 @@
 ;;  realgud:undodb-gdb  --- Main interface to undodb-gdb via Emacs
 ;;; Commentary:
 
-;; Copyright (C) 2015-2016 Free Software Foundation, Inc
+;; Copyright (C) 2015-2017 Free Software Foundation, Inc
 
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 ;; Author: Felipe Lema <felipelema@mortemale.org>
@@ -21,14 +21,8 @@
 
 ;;  `realgud:undodb-gdb' Main interface to undodb-gdb via Emacs
 ;;; Code:
+(require 'realgud)
 (require 'load-relative)
-(require-relative-list '("../../common/helper" "../../common/utils")
-		       "realgud-")
-
-(require-relative-list '("../../common/buffer/command"
-			 "../../common/buffer/source")
-		       "realgud-buffer-")
-
 (require-relative-list '("core" "track-mode") "realgud:undodb-gdb-")
 
 (declare-function realgud-cmdbuf? 'realgud-buffer-command)
